@@ -1,24 +1,25 @@
 import unittest
-from program1 import Solution
+from your_module_name import max_water_area
 
-class TestSolution(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+class TestMaxWaterArea(unittest.TestCase):
+    def test_max_water_area(self):
+        # Test case where the maximum area is in the middle of the array
+        self.assertEqual(max_water_area([1, 8, 6, 2, 5, 4, 8, 3, 7]), 49)
 
-    def test_valid_parentheses(self):
-        self.assertTrue(self.solution.isValid("()"))
-        self.assertTrue(self.solution.isValid("()[]{}"))
-        self.assertTrue(self.solution.isValid("{[()]}"))
+        # Test case where the maximum area is at the beginning of the array
+        self.assertEqual(max_water_area([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]), 25)
 
-    def test_invalid_parentheses(self):
-        self.assertFalse(self.solution.isValid("(]"))
-        self.assertFalse(self.solution.isValid("([)]"))
+        # Test case where the maximum area is at the end of the array
+        self.assertEqual(max_water_area([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 25)
 
-    def test_empty_string(self):
-        self.assertTrue(self.solution.isValid(""))
+        # Test case where all heights are equal
+        self.assertEqual(max_water_area([5, 5, 5, 5, 5, 5]), 25)
 
-    def test_mixed_parentheses(self):
-        self.assertFalse(self.solution.isValid("(){"))
+        # Test case where heights are in descending order
+        self.assertEqual(max_water_area([10, 8, 6, 4, 2, 1]), 10)
+
+        # Test case where heights are in ascending order
+        self.assertEqual(max_water_area([1, 2, 4, 6, 8, 10]), 10)
 
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
