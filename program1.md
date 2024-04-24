@@ -1,29 +1,4 @@
-Valid Parentheses
-Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+Given an unsorted list of integers, find the smallest missing positive integer. For example, for the list [3, 4, -1, 1], the smallest missing positive integer is 2. For the list [1, 2, 0], the smallest missing positive integer is 3. For the list [-1, -3, 4, 2], the smallest missing positive integer is 1.
 
-An input string is valid if:
-
-Open brackets must be closed by the same type of brackets.
-Open brackets must be closed in the correct order.
-Every close bracket has a corresponding open bracket of the same type.
- 
-
-Example 1:
-
-Input: s = "()"
-Output: true
-Example 2:
-
-Input: s = "()[]{}"
-Output: true
-Example 3:
-
-Input: s = "(]"
-Output: false
- 
-
-Constraints:
-
-1 <= s.length <= 104
-s consists of parentheses only '()[]{}'.
+Implement the function smallest_missing_positive_integer using the provided smallest_missing_positive_integer function to find the smallest missing positive integer in the given list.
 
