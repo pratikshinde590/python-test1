@@ -5,7 +5,7 @@
 
 # Questions:
 
-1. program1.md -- 20 Marks
+1. program1.md -- 10 Marks
 2. program2.md -- 20 Marks
 
 
