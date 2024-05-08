@@ -1,15 +1,24 @@
 import unittest
-from program1 import smallest_missing_positive_integer
+from program1 import Solution
 
-class TestSmallestMissingPositiveInteger(unittest.TestCase):
-    def test_smallest_missing_positive_integer(self):
-        self.assertEqual(smallest_missing_positive_integer([3, 4, -1, 1]), 2)
-        self.assertEqual(smallest_missing_positive_integer([1, 2, 0]), 3)
-        self.assertEqual(smallest_missing_positive_integer([-1, -3, 4, 2]), 1)
-        self.assertEqual(smallest_missing_positive_integer([1, 2, 3]), 4)
-        self.assertEqual(smallest_missing_positive_integer([-1, -2, -3]), 1)
-        self.assertEqual(smallest_missing_positive_integer([1, 2, 3, 4, 5, 6, 7, 8, 9]), 10)
-        self.assertEqual(smallest_missing_positive_integer([]), 1)
+class TestSolution(unittest.TestCase):
+    def setUp(self):
+        self.solution = Solution()
+
+    def test_valid_parentheses(self):
+        self.assertTrue(self.solution.isValid("()"))
+        self.assertTrue(self.solution.isValid("()[]{}"))
+        self.assertTrue(self.solution.isValid("{[()]}"))
+
+    def test_invalid_parentheses(self):
+        self.assertFalse(self.solution.isValid("(]"))
+        self.assertFalse(self.solution.isValid("([)]"))
+
+    def test_empty_string(self):
+        self.assertTrue(self.solution.isValid(""))
+
+    def test_mixed_parentheses(self):
+        self.assertFalse(self.solution.isValid("(){"))
 
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
